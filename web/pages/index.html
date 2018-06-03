@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Notes</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <style media="screen" type="text/css">
+
+body{
+
+    background-color: rgba(210, 105, 30, 0.75) ;
+
+}
+
+h1 {
+
+    color: cornsilk;
+    text-align: center;
+    font-size: 50px ;
+    font-weight: bold ;
+    padding-top: 30px;
+    font-family: Centaur ;
+    margin-bottom: 50px;
+
+}
+
+.note{
+    height: 350px;
+    max-width: 250px;
+    background-color: beige;
+    color: #8e7869;
+    margin: 33px;
+    border: #8e7869 solid 2px;
+
+}
+
+.header-note{
+    padding: 10px;
+    font-size: 16px;
+    background-color: beige;
+    border: none;
+    outline: none;
+    height: 320px;
+    width: 230px;
+    resize: none;
+}
+
+.footer{
+
+    width: 100%;
+    height: 70px;
+    text-align: center;
+}
+
+.footer-button{
+    margin: 80px;
+    width: 130px;
+    height: 40px;
+    font-size: 16px;
+    background-color: #8e7869;
+    color: beige;
+    border: 1px solid beige;
+    outline: none;
+}
+
+.footer-button:hover{
+    background-color: #644f43;
+}
+
+.footer-button:active{
+    background-color: #907a6c;
+}
+
+.another-button{
+    margin-top: 35px;
+    text-align: center;
+}
+
+.button-style{
+    font-size: 16px;
+    background-color: #8e7869;
+    color: beige;
+    border: 1px solid beige;
+    outline: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+}
+
+.button-style:hover{
+    background-color: #644f43;
+}
+
+.button-style:active{
+    background-color: #907a6c;
+}
+
+
+    </style>
+
+
+</head>
+<body>
+
+<div>
+    <h1> Your amazing notes </h1>
+</div>
+
+<div class="container-fluid">
+    <div class="row ">
+        <div class="note col-xs-6 col-md-4">
+            <textarea class="header-note" name="note0" placeholder="Enter your note here..." form="saveForm"></textarea>
+
+            <div class="row another-button">
+                <div class="col-xs-12">
+                    <form action="/servlet/SaveServlet" method="post" id = "deleteForm0">
+                        <button type="submit" class="glyphicon glyphicon-remove button-style" name="delete" value="delete"></button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<div class="row ">
+
+    <div class="footer">
+        <form action="/servlet/SaveServlet" method="post" id="saveForm">
+            <input type="submit" value="Save note" class="footer-button">
+        </form>
+    </div>
+</div>
+</div>
+
+
+</body>
+</html>
